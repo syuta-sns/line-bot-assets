@@ -26,10 +26,10 @@
     margin-bottom: 10px;
   }
   .animal-image img {
-    width: 80px; /* サイズ調整 */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 400px; /* あなたが用意した画像の幅 */
+   height: auto; /* 縦横比を維持するためにautoに設定 */
+   max-width: 100%; /* 親要素の幅を超えないようにする */
+   object-fit: contain; /* 画像が指定された領域に収まるように調整 */
   }
   .type-label {
     color: #a87e74; /* くすみブラウン */
@@ -134,7 +134,7 @@
     <div class="type-label">しか系（礼儀正しい控えめ…）</div>
     <h1>あなたの気になる人は<br>『しか系』タイプ！</h1>
     <div class="type-desc">
-      Nozomiさんはしっかり者で控えめ、相手を立てるのが得意。<br>
+      しっかり者で控えめ、相手を立てるのが得意。<br>
       失礼なことは苦手で距離感を大事にする。<br><br>
       <b>傾向：</b> 言葉遣いが丁寧で落ち着いたトーン。急にフレンドリーになるより、じっくり信頼を育てるタイプ。<br>
       <b>おすすめLINE：</b> 挨拶やお礼、共感の言葉を大切に、敬語や丁寧なLINEを意識すると好印象。<br>
