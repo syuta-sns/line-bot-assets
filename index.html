@@ -17,6 +17,7 @@
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:site" content="">
  <meta name="twitter:creator" content="">
+
  <style>
  body {
    background: #f8f4f0; /* 淡いベージュ */
@@ -34,25 +35,37 @@
    padding: 32px 20px 28px 20px;
    box-sizing: border-box;
  }
+ /* 新しいタイトル用のスタイル */
+ .main-title {
+   font-size: 1.5rem; /* h1と同じくらいで良いでしょう */
+   font-weight: bold;
+   letter-spacing: 2px;
+   margin-bottom: 20px; /* 画像との間に余白 */
+   color: #758ca3; /* h1と同じ色 */
+   text-align: center;
+   line-height: 1.4; /* 改行を考慮 */
+ }
  .animal-image {
    text-align: center;
-   margin-bottom: 20px; /* 少し余白を増やしました */
+   margin-bottom: 20px; /* 画像の下の余白 */
  }
  .animal-image img {
-   width: 400px; /* あなたが用意した画像の幅 */
-   height: auto; /* 縦横比を維持するためにautoに設定 */
+   /* ここを幅200pxに変更 */
+   width: 200px; /* 画像の幅を半分に */
+   height: auto; /* 縦横比を維持 */
    max-width: 100%; /* 親要素の幅を超えないようにする */
    display: block;
    margin: 0 auto;
    object-fit: contain; /* 画像全体が枠に収まるように調整 */
  }
+ /* type-labelは今回使用しないため、スタイルは残しますがHTMLから削除します */
  .type-label {
-   color: #a87e74; /* くすみブラウン */
+   color: #a87e74;
    font-weight: bold;
    font-size: 2.1rem;
    margin-bottom: 10px;
    letter-spacing: 2px;
-   text-align: center; /* 中央寄せ */
+   text-align: center;
  }
  .type-desc {
    background: #fdf6f3; /* より淡いベージュ */
@@ -63,12 +76,13 @@
    border: 1px solid #eee5de; /* 薄いボーダー */
    line-height: 1.6; /* 行の高さを調整して読みやすく */
  }
+ /* h1は今回使用しないため、スタイルは残しますがHTMLから削除します */
  h1 {
    font-size: 1.5rem;
    font-weight: bold;
    letter-spacing: 2px;
    margin-bottom: 12px;
-   color: #758ca3; /* 淡いブルーグレー */
+   color: #758ca3;
    text-align: center;
  }
  .share-btns {
@@ -141,8 +155,9 @@
      padding: 8px 20px; /* 少し小さく */
      font-size: 1rem;
    }
+   /* スマホ表示時の画像サイズ調整も半分に */
    .animal-image img {
-     width: 100%; /* スマホでは画面幅いっぱいに */
+     width: 50%; /* スマホでは元々100%だったのを50%に */
      height: auto; /* 高さは自動調整 */
    }
  }
@@ -150,11 +165,12 @@
 </head>
 <body>
  <div class="container">
+   <div class="main-title">あなたの気になる人は<br>『ねずみ男子』</div>
+
    <div class="animal-image">
      <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%8B%95%E7%89%A91.png" alt="キャラクターのイラスト">
    </div>
-   <div class="type-label">しか系（礼儀正しい控えめ…）</div>
-   <h1>あなたの気になる人は<br>『しか系』タイプ！</h1>
+
    <div class="type-desc">
      このタイプはしっかり者で控えめ、相手を立てるのが得意。<br>
      失礼なことは苦手で距離感を大事にする。<br><br>
