@@ -3,12 +3,12 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width,initial-scale=1">
- <title>しか系｜LINE性格診断シェア</title>
- <meta name="description" content="あなたの気になる人は『しか系』タイプ！診断結果をシェアしよう！">
+ <title>ねずみ男子｜LINE性格診断シェア</title>
+ <meta name="description" content="あなたの気になる人は『ねずみ男子』タイプ！診断結果をシェアしよう！">
 
  <meta property="og:url" content="https://line-bot-assets.vercel.app/">
  <meta property="og:type" content="website">
- <meta property="og:title" content="あなたの気になる人は『しか系』タイプ！無料LINE性格診断でチェック！">
+ <meta property="og:title" content="あなたの気になる人は『ねずみ男子』タイプ！無料LINE性格診断でチェック！">
  <meta property="og:description" content="この性格診断で、あなたの気になる人の性格傾向をチェック！友達やパートナーの意外な一面を発見しよう！">
  <meta property="og:image" content="ここにシェア用の横長画像のURLを貼り付けてください">
  <meta property="og:site_name" content="LINE性格診断">
@@ -35,30 +35,28 @@
    padding: 32px 20px 28px 20px;
    box-sizing: border-box;
  }
- /* 新しいタイトル用のスタイル */
+
  .main-title {
-   font-size: 1.5rem; /* h1と同じくらいで良いでしょう */
+   font-size: 1.5rem; 
    font-weight: bold;
    letter-spacing: 2px;
-   margin-bottom: 20px; /* 画像との間に余白 */
-   color: #758ca3; /* h1と同じ色 */
+   margin-bottom: 20px;
+   color: #758ca3;
    text-align: center;
-   line-height: 1.4; /* 改行を考慮 */
+   line-height: 1.4;
  }
  .animal-image {
    text-align: center;
-   margin-bottom: 20px; /* 画像の下の余白 */
+   margin-bottom: 20px;
  }
  .animal-image img {
-   /* ここを幅200pxに変更 */
    width: 200px; /* 画像の幅を半分に */
-   height: auto; /* 縦横比を維持 */
-   max-width: 100%; /* 親要素の幅を超えないようにする */
+   height: auto;
+   max-width: 100%;
    display: block;
    margin: 0 auto;
-   object-fit: contain; /* 画像全体が枠に収まるように調整 */
+   object-fit: contain;
  }
- /* type-labelは今回使用しないため、スタイルは残しますがHTMLから削除します */
  .type-label {
    color: #a87e74;
    font-weight: bold;
@@ -67,16 +65,16 @@
    letter-spacing: 2px;
    text-align: center;
  }
+ /* type-descの文字サイズを1段階小さく */
  .type-desc {
-   background: #fdf6f3; /* より淡いベージュ */
+   background: #fdf6f3;
    border-radius: 14px;
    padding: 16px;
-   font-size: 1.05rem;
+   font-size: 0.95rem; /* 1.05remから変更 */
    margin-bottom: 14px;
-   border: 1px solid #eee5de; /* 薄いボーダー */
-   line-height: 1.6; /* 行の高さを調整して読みやすく */
+   border: 1px solid #eee5de;
+   line-height: 1.6;
  }
- /* h1は今回使用しないため、スタイルは残しますがHTMLから削除します */
  h1 {
    font-size: 1.5rem;
    font-weight: bold;
@@ -89,24 +87,24 @@
    margin: 32px 0 8px 0;
    display: flex;
    justify-content: center;
-   flex-wrap: wrap; /* ボタンが多すぎて横並びにならない場合は折り返す */
-   gap: 14px; /* 間隔を少し狭く */
+   flex-wrap: wrap;
+   gap: 14px;
  }
  .share-btn {
-   border: 1px solid #e0d8d0; /* 淡い色のボーダー */
+   border: 1px solid #e0d8d0;
    border-radius: 8px;
-   padding: 8px 16px; /* 少し小さく */
+   padding: 8px 16px;
    font-size: 1rem;
-   background: #fff; /* 白背景 */
-   color: #a87e74; /* くすみブラウン */
+   background: #fff;
+   color: #a87e74;
    font-weight: bold;
    box-shadow: 0 2px 8px rgba(180,150,200,0.06);
    cursor: pointer;
    transition: background 0.15s, color 0.15s, border-color 0.15s;
  }
  .share-btn:hover {
-   background: #f8f4f0; /* ホバー時の背景色 */
-   color: #758ca3; /* ホバー時の文字色 */
+   background: #f8f4f0;
+   color: #758ca3;
    border-color: #758ca3;
  }
  .cta-box {
@@ -120,11 +118,11 @@
  }
  .cta-box a {
    display: inline-block;
-   background: linear-gradient(90deg,#f3e8e5 20%,#e1e8f2 100%); /* 淡いグラデーション */
+   background: linear-gradient(90deg,#f3e8e5 20%,#e1e8f2 100%);
    color: #758ca3;
    font-weight: bold;
    border-radius: 18px;
-   padding: 10px 24px; /* 少し調整 */
+   padding: 10px 24px;
    text-decoration: none;
    font-size: 1.1rem;
    margin-top: 10px;
@@ -136,7 +134,7 @@
    color: #5e5752;
  }
  .animal-icon {
-   display: none; /* 元のアイコンは非表示 */
+   display: none;
  }
  @media (max-width: 500px) {
    .container {
@@ -145,38 +143,44 @@
      padding: 18px 3vw;
    }
    .share-btns {
-     gap: 10px; /* さらに狭く */
+     gap: 10px;
    }
    .share-btn {
-     padding: 6px 12px; /* さらに小さく */
+     padding: 6px 12px;
      font-size: 0.9rem;
    }
    .cta-box a {
-     padding: 8px 20px; /* 少し小さく */
+     padding: 8px 20px;
      font-size: 1rem;
    }
-   /* スマホ表示時の画像サイズ調整も半分に */
    .animal-image img {
-     width: 50%; /* スマホでは元々100%だったのを50%に */
-     height: auto; /* 高さは自動調整 */
+     width: 50%;
+     height: auto;
+   }
+   /* スマホ表示時のmain-titleの文字サイズも調整 */
+   .main-title {
+     font-size: 1.1rem; /* スマホでさらに小さく */
+   }
+   /* スマホ表示時のtype-descの文字サイズも調整 */
+   .type-desc {
+     font-size: 0.85rem; /* スマホでさらに小さく */
    }
  }
  </style>
 </head>
 <body>
  <div class="container">
-   <div class="main-title">あなたの気になる人は<br>『ねずみ男子』</div>
+   <div class="main-title">ねずみ男子（おしゃべりアイデアマン）🐭</div>
 
    <div class="animal-image">
      <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%8B%95%E7%89%A91.png" alt="キャラクターのイラスト">
    </div>
 
    <div class="type-desc">
-     このタイプはしっかり者で控えめ、相手を立てるのが得意。<br>
-     失礼なことは苦手で距離感を大事にする。<br><br>
-     <b>傾向：</b> 言葉遣いが丁寧で落ち着いたトーン。急にフレンドリーになるより、じっくり信頼を育てるタイプ。<br>
-     <b>おすすめLINE：</b> 挨拶やお礼、共感の言葉を大切に、敬語や丁寧なLINEを意識すると好印象。<br>
-     <b>NGライン：</b> 失礼な冗談、急なタメ口、馴れ馴れしすぎる表現は控えて。
+     彼の性格: 常に新しい話題や面白いネタが泉のように湧いてくる、フットワーク最速のアイデアマン！おしゃべりにも恋愛にも熱心で、LINEを途切らせない盛り上げ役です。あなたの反応を常に気にかけ、笑顔を見るためにネタをストックしている、実は気遣い屋な一面も。<br><br>
+     LINEの使い方: 即レスが基本で、テンポ良く短文で次々と話題を振ります。愛情表現も豊かで、面白ネタ、写真、URLなど、あらゆる手段でコミュニケーションを仕掛けてくる「攻めLINE」タイプ。追いLINEも辞しません。<br><br>
+     おすすめLINE: 彼のテンポに合わせて素早くリアクションを返してあげましょう。「すごい！」「面白い！」と明るく乗っかって、話題を広げてあげると大喜びします。あなたの笑顔が彼の原動力です！<br><br>
+     これだけはNG: せっかく振ってくれた話題をスルーしたり、無反応でいたり、長い沈黙が続くと一気にしょんぼりしてしまいます。彼の盛り上げたい気持ちを尊重してあげましょう。
    </div>
 
    <div class="share-btns">
@@ -197,12 +201,14 @@
  <script>
    function shareToTwitter() {
      const url = encodeURIComponent(location.href);
-     const text = encodeURIComponent("私の気になる人は「しか系」でした🦌 LINE性格診断でチェック！▼");
+     // シェアテキストも新しい内容に合わせて調整しました
+     const text = encodeURIComponent("私の気になる人は「ねずみ男子」でした🐭 LINE性格診断でチェック！▼");
      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
    }
    function shareToThreads() {
      const url = encodeURIComponent(location.href);
-     const text = encodeURIComponent("私の気になる人は「しか系」でした🦌 #LINE性格診断 ▼");
+     // シェアテキストも新しい内容に合わせて調整しました
+     const text = encodeURIComponent("私の気になる人は「ねずみ男子」でした🐭 #LINE性格診断 ▼");
      window.open(`https://www.threads.net/intent/post?text=${text}%20${url}`, "_blank");
    }
    function shareToInstagram() {
