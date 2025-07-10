@@ -36,52 +36,18 @@
    box-sizing: border-box;
  }
 
- /* main-titleの文字サイズを2倍に */
- .main-title {
-   font-size: 3.0rem; /* 1.5remの約2倍に変更 */
-   font-weight: bold;
-   letter-spacing: 2px;
-   margin-bottom: 20px;
-   color: #758ca3;
-   text-align: center;
-   line-height: 1.4;
- }
  .animal-image {
    text-align: center;
-   margin-bottom: 20px;
+   margin-bottom: 20px; /* 画像の下の余白を調整 */
  }
  .animal-image img {
-   width: 200px; /* 画像の幅を半分に */
+   width: 100%; /* 画像の幅をコンテナの100%に調整 */
    height: auto;
-   max-width: 100%;
+   max-width: 400px; /* 必要に応じて最大幅を調整。PCでの表示を考慮 */
    display: block;
    margin: 0 auto;
    object-fit: contain;
- }
- .type-label {
-   color: #a87e74;
-   font-weight: bold;
-   font-size: 2.1rem;
-   margin-bottom: 10px;
-   letter-spacing: 2px;
-   text-align: center;
- }
- .type-desc {
-   background: #fdf6f3;
-   border-radius: 14px;
-   padding: 16px;
-   font-size: 0.95rem;
-   margin-bottom: 14px;
-   border: 1px solid #eee5de;
-   line-height: 1.6;
- }
- h1 {
-   font-size: 1.5rem;
-   font-weight: bold;
-   letter-spacing: 2px;
-   margin-bottom: 12px;
-   color: #758ca3;
-   text-align: center;
+   border-radius: 10px; /* 画像の角を少し丸くすることも可能 */
  }
  .share-btns {
    margin: 32px 0 8px 0;
@@ -154,34 +120,16 @@
      font-size: 1rem;
    }
    .animal-image img {
-     width: 50%;
+     width: 100%; /* スマホでも100%に調整 */
      height: auto;
-   }
-   /* スマホ表示時のmain-titleの文字サイズも2倍に調整 */
-   .main-title {
-     font-size: 2.2rem; /* 1.1remの約2倍に変更 */
-   }
-   /* type-descの文字サイズはそのまま */
-   .type-desc {
-     font-size: 0.85rem;
    }
  }
  </style>
 </head>
 <body>
  <div class="container">
-   <div class="main-title">あなたの気になる人は<br>
-   <b>『ねずみ男子』</b> </div>
-
    <div class="animal-image">
-     <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%8B%95%E7%89%A91.png" alt="キャラクターのイラスト">
-   </div>
-
-   <div class="type-desc">
-     <b>彼の性格:</b> 常に新しい話題や面白いネタが泉のように湧いてくる、フットワーク最速のアイデアマン！おしゃべりにも恋愛にも熱心で、LINEを途切らせない盛り上げ役です。あなたの反応を常に気にかけ、笑顔を見るためにネタをストックしている、実は気遣い屋な一面も。<br><br>
-     <b>LINEの使い方:</b> 即レスが基本で、テンポ良く短文で次々と話題を振ります。愛情表現も豊かで、面白ネタ、写真、URLなど、あらゆる手段でコミュニケーションを仕掛けてくる「攻めLINE」タイプ。追いLINEも辞しません。<br><br>
-     <b>おすすめLINE:</b> 彼のテンポに合わせて素早くリアクションを返してあげましょう。「すごい！」「面白い！」と明るく乗っかって、話題を広げてあげると大喜びします。あなたの笑顔が彼の原動力です！<br><br>
-     <b>これだけはNG:</b> せっかく振ってくれた話題をスルーしたり、無反応でいたり、長い沈黙が続くと一気にしょんぼりしてしまいます。彼の盛り上げたい気持ちを尊重してあげましょう。
+     <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/4448a1144c7480e83985ae9fa7de6e2b176ae5df/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%991.png" alt="干支性格タイプカード">
    </div>
 
    <div class="share-btns">
