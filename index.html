@@ -8,9 +8,9 @@
 
  <meta property="og:url" content="https://line-bot-assets.vercel.app/">
  <meta property="og:type" content="website">
- <meta property="og:title" content="私の気になる人は『ねずみ男子』タイプ！無料LINE性格診断でチェック！">
- <meta property="og:description" content="LINE性格診断で、あなたも気になる人の性格傾向をチェック！友達やパートナーの意外な一面を発見しよう！">
- <meta property="og:image" content="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%8B%95%E7%89%A91.png">
+ <meta property="og:title" content="あなたの気になる人は『ねずみ男子』タイプ！無料LINE性格診断でチェック！">
+ <meta property="og:description" content="この性格診断で、あなたの気になる人の性格傾向をチェック！友達やパートナーの意外な一面を発見しよう！">
+ <meta property="og:image" content="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/4448a1144c7480e83985ae9fa7de6e2b176ae5df/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%991.png">
  <meta property="og:site_name" content="LINE性格診断">
  <meta property="og:locale" content="ja_JP">
 
@@ -36,8 +36,9 @@
    box-sizing: border-box;
  }
 
+ /* main-titleの文字サイズを2倍に */
  .main-title {
-   font-size: 1.5rem; 
+   font-size: 3.0rem; /* 1.5remの約2倍に変更 */
    font-weight: bold;
    letter-spacing: 2px;
    margin-bottom: 20px;
@@ -65,12 +66,11 @@
    letter-spacing: 2px;
    text-align: center;
  }
- /* type-descの文字サイズを1段階小さく */
  .type-desc {
    background: #fdf6f3;
    border-radius: 14px;
    padding: 16px;
-   font-size: 0.95rem; /* 1.05remから変更 */
+   font-size: 0.95rem;
    margin-bottom: 14px;
    border: 1px solid #eee5de;
    line-height: 1.6;
@@ -157,13 +157,13 @@
      width: 50%;
      height: auto;
    }
-   /* スマホ表示時のmain-titleの文字サイズも調整 */
+   /* スマホ表示時のmain-titleの文字サイズも2倍に調整 */
    .main-title {
-     font-size: 2rem; /* スマホでさらに小さく */
+     font-size: 2.2rem; /* 1.1remの約2倍に変更 */
    }
-   /* スマホ表示時のtype-descの文字サイズも調整 */
+   /* type-descの文字サイズはそのまま */
    .type-desc {
-     font-size: 0.85rem; /* スマホでさらに小さく */
+     font-size: 0.85rem;
    }
  }
  </style>
@@ -177,12 +177,12 @@
      <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%8B%95%E7%89%A91.png" alt="キャラクターのイラスト">
    </div>
 
-  <div class="type-desc">
-  <b>彼の性格:</b> 常に新しい話題や面白いネタが泉のように湧いてくる、フットワーク最速のアイデアマン！おしゃべりにも恋愛にも熱心で、LINEを途切らせない盛り上げ役です。あなたの反応を常に気にかけ、笑顔を見るためにネタをストックしている、実は気遣い屋な一面も。<br><br>
-  <b>LINEの使い方:</b> 即レスが基本で、テンポ良く短文で次々と話題を振ります。愛情表現も豊かで、面白ネタ、写真、URLなど、あらゆる手段でコミュニケーションを仕掛けてくる「攻めLINE」タイプ。追いLINEも辞しません。<br><br>
-  <b>おすすめLINE:</b> 彼のテンポに合わせて素早くリアクションを返してあげましょう。「すごい！」「面白い！」と明るく乗っかって、話題を広げてあげると大喜びします。あなたの笑顔が彼の原動力です！<br><br>
-  <b>これだけはNG:</b> せっかく振ってくれた話題をスルーしたり、無反応でいたり、長い沈黙が続くと一気にしょんぼりしてしまいます。彼の盛り上げたい気持ちを尊重してあげましょう。
-　</div>
+   <div class="type-desc">
+     <b>彼の性格:</b> 常に新しい話題や面白いネタが泉のように湧いてくる、フットワーク最速のアイデアマン！おしゃべりにも恋愛にも熱心で、LINEを途切らせない盛り上げ役です。あなたの反応を常に気にかけ、笑顔を見るためにネタをストックしている、実は気遣い屋な一面も。<br><br>
+     <b>LINEの使い方:</b> 即レスが基本で、テンポ良く短文で次々と話題を振ります。愛情表現も豊かで、面白ネタ、写真、URLなど、あらゆる手段でコミュニケーションを仕掛けてくる「攻めLINE」タイプ。追いLINEも辞しません。<br><br>
+     <b>おすすめLINE:</b> 彼のテンポに合わせて素早くリアクションを返してあげましょう。「すごい！」「面白い！」と明るく乗っかって、話題を広げてあげると大喜びします。あなたの笑顔が彼の原動力です！<br><br>
+     <b>これだけはNG:</b> せっかく振ってくれた話題をスルーしたり、無反応でいたり、長い沈黙が続くと一気にしょんぼりしてしまいます。彼の盛り上げたい気持ちを尊重してあげましょう。
+   </div>
 
    <div class="share-btns">
      <button class="share-btn" onclick="shareToTwitter()">X（Twitter）でシェア</button>
@@ -193,8 +193,8 @@
    <div id="copyMsg" style="text-align:center;color:#6bb37f;margin-bottom:6px;font-size:0.98rem;display:none;">リンクをコピーしました！</div>
 
    <div class="cta-box">
-     <div>あなたも「気になる人の性格傾向」<br>診断してみよう！<br>
-       <b>↓↓↓</b>
+     <div>あなたも「気になる人の性格傾向」知ってみませんか？<br>
+       <b>↓↓↓！</b>
      </div>
      <a href="https://lin.ee/xc1xSne" target="_blank">LINEで無料診断する</a>
    </div>
@@ -202,13 +202,11 @@
  <script>
    function shareToTwitter() {
      const url = encodeURIComponent(location.href);
-     // シェアテキストも新しい内容に合わせて調整しました
      const text = encodeURIComponent("私の気になる人は「ねずみ男子」でした🐭 LINE性格診断でチェック！▼");
      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
    }
    function shareToThreads() {
      const url = encodeURIComponent(location.href);
-     // シェアテキストも新しい内容に合わせて調整しました
      const text = encodeURIComponent("私の気になる人は「ねずみ男子」でした🐭 #LINE性格診断 ▼");
      window.open(`https://www.threads.net/intent/post?text=${text}%20${url}`, "_blank");
    }
