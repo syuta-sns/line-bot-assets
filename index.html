@@ -136,15 +136,14 @@
      <button class="share-btn" onclick="shareToTwitter()">X（Twitter）でシェア</button>
      <button class="share-btn" onclick="shareToThreads()">Threadsでシェア</button>
      <button class="share-btn" onclick="shareToInstagram()">Instagramストーリー</button>
+     <button class="share-btn" onclick="shareToLine()">LINEでシェア</button>
      <button class="share-btn" onclick="copyLink()">リンクコピー</button>
    </div>
    <div id="copyMsg" style="text-align:center;color:#6bb37f;margin-bottom:6px;font-size:0.98rem;display:none;">リンクをコピーしました！</div>
 
    <div class="cta-box">
-     <div>あなたも<br>
-       <b>「気になる人の性格傾向」<br>
-       診断してみよう！<br>
-       <b>↓↓↓</b>
+     <div>あなたも「気になる人の性格傾向」知ってみませんか？<br>
+       <b>↓↓↓！</b>
      </div>
      <a href="https://lin.ee/xc1xSne" target="_blank">LINEで無料診断する</a>
    </div>
@@ -162,6 +161,13 @@
    }
    function shareToInstagram() {
      alert("Instagramストーリーへのシェアは画像保存→アプリ内でシェアしてね！(WebシェアAPI非対応)");
+   }
+   // LINEシェア機能を追加
+   function shareToLine() {
+     const url = encodeURIComponent(location.href);
+     // LINEの公式シェアURLスキーム
+     // PCでアクセスされた場合はLINEの公式サイトに飛び、モバイルでアクセスされた場合はLINEアプリが開きます。
+     window.open(`https://social-plugins.line.me/lineit/share?url=${url}`, "_blank");
    }
    function copyLink() {
      navigator.clipboard.writeText(location.href);
