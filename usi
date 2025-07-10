@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>うし男子｜LINE性格診断シェア</title>
+ <meta name="description" content="あなたの気になる人は『うし男子』タイプ！診断結果をシェアしよう！">
+
+ <meta property="og:url" content="https://line-bot-assets.vercel.app/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="あなたの気になる人は『うし男子』タイプ！無料LINE性格診断でチェック！">
+ <meta property="og:description" content="この性格診断で、あなたの気になる人の性格傾向をチェック！友達やパートナーの意外な一面を発見しよう！">
+ <meta property="og:image" content="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/4448a1144c7480e83985ae9fa7de6e2b176ae5df/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%992.png">
+ <meta property="og:site_name" content="LINE性格診断">
+ <meta property="og:locale" content="ja_JP">
+
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:site" content="">
+ <meta name="twitter:creator" content="">
+
+ <style>
+ body {
+   background: #f8f4f0; /* 淡いベージュ */
+   color: #5e5752; /* 落ち着いたグレー */
+   font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+ .container {
+   max-width: 430px;
+   margin: 24px auto;
+   background: #fff;
+   border-radius: 20px;
+   box-shadow: 0 6px 20px rgba(150,180,210,0.08);
+   padding: 32px 20px 28px 20px;
+   box-sizing: border-box;
+ }
+
+ .animal-image {
+   text-align: center;
+   margin-bottom: 20px; /* 画像の下の余白を調整 */
+ }
+ .animal-image img {
+   width: 100%; /* 画像の幅をコンテナの100%に調整 */
+   height: auto;
+   max-width: 400px; /* 必要に応じて最大幅を調整。PCでの表示を考慮 */
+   display: block;
+   margin: 0 auto;
+   object-fit: contain;
+   border-radius: 10px; /* 画像の角を少し丸くすることも可能 */
+ }
+ .share-btns {
+   margin: 32px 0 8px 0;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 14px;
+ }
+ .share-btn {
+   border: 1px solid #e0d8d0;
+   border-radius: 8px;
+   padding: 8px 16px;
+   font-size: 1rem;
+   background: #fff;
+   color: #a87e74;
+   font-weight: bold;
+   box-shadow: 0 2px 8px rgba(180,150,200,0.06);
+   cursor: pointer;
+   transition: background 0.15s, color 0.15s, border-color 0.15s;
+ }
+ .share-btn:hover {
+   background: #f8f4f0;
+   color: #758ca3;
+   border-color: #758ca3;
+ }
+ .cta-box {
+   margin: 28px 0 0 0;
+   background: #fdf6f3;
+   border: 1px solid #eee5de;
+   border-radius: 14px;
+   padding: 18px 10px 16px 10px;
+   text-align: center;
+   font-size: 1rem;
+ }
+ .cta-box a {
+   display: inline-block;
+   background: linear-gradient(90deg,#f3e8e5 20%,#e1e8f2 100%);
+   color: #758ca3;
+   font-weight: bold;
+   border-radius: 18px;
+   padding: 10px 24px;
+   text-decoration: none;
+   font-size: 1.1rem;
+   margin-top: 10px;
+   transition: background 0.12s, color 0.12s;
+   box-shadow: 0 2px 8px rgba(120,150,200,0.05);
+ }
+ .cta-box a:hover {
+   background: linear-gradient(90deg,#f9f1ee 30%,#f0f8ff 100%);
+   color: #5e5752;
+ }
+ .animal-icon {
+   display: none;
+ }
+ @media (max-width: 500px) {
+   .container {
+     border-radius: 0;
+     margin: 0;
+     padding: 18px 3vw;
+   }
+   .share-btns {
+     gap: 10px;
+   }
+   .share-btn {
+     padding: 6px 12px;
+     font-size: 0.9rem;
+   }
+   .cta-box a {
+     padding: 8px 20px;
+     font-size: 1rem;
+   }
+   .animal-image img {
+     width: 100%; /* スマホでも100%に調整 */
+     height: auto;
+   }
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+   <div class="animal-image">
+     <img src="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/4448a1144c7480e83985ae9fa7de6e2b176ae5df/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%991.png" alt="干支性格タイプカード">
+   </div>
+
+   <div class="share-btns">
+     <button class="share-btn" onclick="shareToTwitter()">X（Twitter）でシェア</button>
+     <button class="share-btn" onclick="shareToThreads()">Threadsでシェア</button>
+     <button class="share-btn" onclick="shareToInstagram()">Instagramストーリー</button>
+     <button class="share-btn" onclick="shareToLine()">LINEでシェア</button>
+     <button class="share-btn" onclick="copyLink()">リンクコピー</button>
+   </div>
+   <div id="copyMsg" style="text-align:center;color:#6bb37f;margin-bottom:6px;font-size:0.98rem;display:none;">リンクをコピーしました！</div>
+
+   <div class="cta-box">
+     <div>あなたも「気になる人の性格傾向」知ってみませんか？<br>
+       <b>↓↓↓！</b>
+     </div>
+     <a href="https://lin.ee/xc1xSne" target="_blank">LINEで無料診断する</a>
+   </div>
+ </div>
+ <script>
+   function shareToTwitter() {
+     const url = encodeURIComponent(location.href);
+     const text = encodeURIComponent("私の気になる人は「うし男子」でした🐂 LINE性格診断でチェック！▼");
+     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
+   }
+   function shareToThreads() {
+     const url = encodeURIComponent(location.href);
+     const text = encodeURIComponent("私の気になる人は「うし男子」でした🐂 #LINE性格診断 ▼");
+     window.open(`https://www.threads.net/intent/post?text=${text}%20${url}`, "_blank");
+   }
+   function shareToInstagram() {
+     alert("Instagramストーリーへのシェアは画像保存→アプリ内でシェアしてね！(WebシェアAPI非対応)");
+   }
+   // LINEシェア機能を追加
+   function shareToLine() {
+     const url = encodeURIComponent(location.href);
+     // LINEの公式シェアURLスキーム
+     // PCでアクセスされた場合はLINEの公式サイトに飛び、モバイルでアクセスされた場合はLINEアプリが開きます。
+     window.open(`https://social-plugins.line.me/lineit/share?url=${url}`, "_blank");
+   }
+   function copyLink() {
+     navigator.clipboard.writeText(location.href);
+     document.getElementById('copyMsg').style.display = 'block';
+     setTimeout(() => { document.getElementById('copyMsg').style.display = 'none'; }, 1800);
+   }
+ </script>
+</body>
+</html>
