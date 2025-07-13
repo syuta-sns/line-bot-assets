@@ -19,11 +19,10 @@
     <meta name="twitter:creator" content="">
     <meta name="twitter:image" id="twitterImage" content="https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%992.png">
 
-
     <style>
         body {
-            background: #f8f4f0; /* 淡いベージュ */
-            color: #5e5752; /* 落ち着いたグレー */
+            background: #f8f4f0;
+            color: #5e5752;
             font-family: 'Yu Gothic', 'Hiragino Sans', sans-serif;
             margin: 0;
             padding: 0;
@@ -102,12 +101,11 @@
             color: #5e5752;
         }
         .page-section {
-            display: none; /* 初期状態では全て非表示 */
+            display: none;
         }
         .page-section.active {
-            display: block; /* アクティブなセクションのみ表示 */
+            display: block;
         }
-        /* 各コンテンツのタイトルスタイル */
         .page-section h2 {
             font-size: 1.8rem;
             text-align: center;
@@ -225,17 +223,18 @@
 
         <div class="cta-box">
             <div>あなたも「気になる人の性格傾向」知ってみませんか？<br>
-                <b>↓↓↓！</b>
+                <b>↓↓↓</b>
             </div>
             <a href="https://lin.ee/xc1xSne" target="_blank">LINEで無料診断する</a>
         </div>
     </div>
+
     <script>
         const animalData = {
             '/ne': {
                 name: 'ネズミ男子',
                 emoji: '🐭',
-                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%991.png', // 画像URLをここに追加
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%991.png',
                 shareText: "私の気になる人は「ネズミ男子」でした🐭 LINE性格診断でチェック！▼"
             },
             '/ushi': {
@@ -256,3 +255,139 @@
                 image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%994.png',
                 shareText: "私の気になる人は「ウサギ男子」でした🐇 LINE性格診断でチェック！▼"
             },
+            '/tatsu': {
+                name: 'タツ男子',
+                emoji: '🐉',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%995.png',
+                shareText: "私の気になる人は「タツ男子」でした🐉 LINE性格診断でチェック！▼"
+            },
+            '/mi': {
+                name: 'ヘビ男子',
+                emoji: '🐍',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%996.png',
+                shareText: "私の気になる人は「ヘビ男子」でした🐍 LINE性格診断でチェック！▼"
+            },
+            '/uma': {
+                name: 'ウマ男子',
+                emoji: '🐎',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%997.png',
+                shareText: "私の気になる人は「ウマ男子」でした🐎 LINE性格診断でチェック！▼"
+            },
+            '/hitsuji': {
+                name: 'ヒツジ男子',
+                emoji: '🐏',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%998.png',
+                shareText: "私の気になる人は「ヒツジ男子」でした🐏 LINE性格診断でチェック！▼"
+            },
+            '/saru': {
+                name: 'サル男子',
+                emoji: '🐒',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%999.png',
+                shareText: "私の気になる人は「サル男子」でした🐒 LINE性格診断でチェック！▼"
+            },
+            '/tori': {
+                name: 'トリ男子',
+                emoji: '🐔',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%9910.png',
+                shareText: "私の気になる人は「トリ男子」でした🐔 LINE性格診断でチェック！▼"
+            },
+            '/inu': {
+                name: 'イヌ男子',
+                emoji: '🐕',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%9911.png',
+                shareText: "私の気になる人は「イヌ男子」でした🐕 LINE性格診断でチェック！▼"
+            },
+            '/i': {
+                name: 'イノシシ男子',
+                emoji: '🐗',
+                image: 'https://raw.githubusercontent.com/syuta-sns/line-bot-assets/main/%E5%B9%B2%E6%94%AF%E6%80%A7%E6%A0%BC%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%82%AB%E3%83%BC%E3%83%88%E3%82%9912.png',
+                shareText: "私の気になる人は「イノシシ男子」でした🐗 LINE性格診断でチェック！▼"
+            }
+        };
+
+        let currentAnimal = null;
+
+        function initializePage() {
+            // URLクエリパラメータまたはハッシュから動物タイプを取得
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || window.location.hash.replace('#', '') || 'ushi';
+            const path = '/' + type;
+            
+            currentAnimal = animalData[path];
+            
+            if (currentAnimal) {
+                // 画像設定
+                document.getElementById('currentAnimalImage').src = currentAnimal.image;
+                
+                // 対応するコンテンツを表示
+                const contentId = type + '-content';
+                const element = document.getElementById(contentId);
+                if (element) {
+                    element.classList.add('active');
+                }
+                
+                // OGPメタタグ更新
+                updateMetaTags();
+            } else {
+                // デフォルト表示（ウシ男子）
+                currentAnimal = animalData['/ushi'];
+                document.getElementById('currentAnimalImage').src = currentAnimal.image;
+                document.getElementById('ushi-content').classList.add('active');
+                updateMetaTags();
+            }
+        }
+
+        function updateMetaTags() {
+            if (!currentAnimal) return;
+            
+            const title = `あなたの気になる人は『${currentAnimal.name}』タイプ！無料LINE性格診断でチェック！`;
+            const description = `${currentAnimal.shareText} この性格診断で、あなたの気になる人の性格傾向をチェック！友達やパートナーの意外な一面を発見しよう！`;
+            
+            document.getElementById('pageTitle').textContent = title;
+            document.getElementById('pageDescription').content = description;
+            document.getElementById('ogTitle').content = title;
+            document.getElementById('ogDescription').content = description;
+            document.getElementById('ogImage').content = currentAnimal.image;
+            document.getElementById('twitterImage').content = currentAnimal.image;
+            document.getElementById('ogUrl').content = window.location.href;
+        }
+
+        function shareToTwitter() {
+            if (!currentAnimal) return;
+            const text = encodeURIComponent(currentAnimal.shareText + ' ' + window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank');
+        }
+
+        function shareToThreads() {
+            if (!currentAnimal) return;
+            const text = encodeURIComponent(currentAnimal.shareText + ' ' + window.location.href);
+            window.open(`https://www.threads.net/intent/post?text=${text}`, '_blank');
+        }
+
+        function shareToInstagram() {
+            if (!currentAnimal) return;
+            const text = encodeURIComponent(currentAnimal.shareText + ' ' + window.location.href);
+            window.open(`https://www.instagram.com/create/story/?text=${text}`, '_blank');
+        }
+
+        function shareToLine() {
+            if (!currentAnimal) return;
+            const text = encodeURIComponent(currentAnimal.shareText + ' ' + window.location.href);
+            window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(currentAnimal.shareText)}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const msg = document.getElementById('copyMsg');
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 2000);
+            });
+        }
+
+        // ページ初期化
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
